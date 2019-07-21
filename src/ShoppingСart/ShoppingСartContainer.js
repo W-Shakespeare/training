@@ -69,29 +69,7 @@ class ShoppingСartContainer extends React.Component {
 
     this.props.shoppingСart(res);
     this.props.shoppingСartLength(res);
-
-    var idItem = event.currentTarget;
-    var idItem = idItem.name;
     console.log(idItem);
-
-    fetch("http://localhost:5000/Shop", {
-      method: "DELETE",
-      headers: {
-        "Content-type": "application/json"
-      },
-      body: JSON.stringify({
-        id: idItem
-      })
-    });
-
-    fetch("http://localhost:5000/Shop1", {
-      method: "GET"
-    })
-      .then(r => r.json())
-      .then(res => console.log(res));
-
-    console.log(1111111111);
-
     //window.location.reload();
   };
 }
