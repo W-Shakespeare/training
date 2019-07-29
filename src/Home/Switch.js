@@ -7,7 +7,7 @@ import NumberOfCoresAll from "./NumberOfCoresAll";
 
 function Switch({ algorithm }) {
   return (
-    <div className="switch ">
+    <div className="switch" id="swi">
       <div className="switch-item">
         <Label className="manufactor" forr="check-manufactor">
           Производители

@@ -2,12 +2,11 @@ import React from "react";
 import { connect } from "react-redux";
 import { addresult, allProcessorItem } from "./duck/actions/actions";
 import ComponentContentSwitch from "./ComponentContentSwitch";
-import processors from "./processor";
+//import processors from "./processor";
 
 class ContainerContentSwitch extends React.Component {
   constructor(props) {
     super(props);
-    this.allProcessorItem();
     this.algorithm();
   }
   render() {
@@ -25,9 +24,7 @@ class ContainerContentSwitch extends React.Component {
   scrollTo() {
     window.scrollTo(0, 0);
   }
-  allProcessorItem = props => {
-    this.props.start(processors);
-  };
+
   inpSearch = props => {
     let inpSearchValue = document.getElementsByClassName("inpSearch")[0].value;
     let result = this.props.reduxState.arrProcessorItem;
@@ -107,7 +104,8 @@ class ContainerContentSwitch extends React.Component {
 
     console.log(arr);
   };
-  algorithm = props => {
+  algorithm = (props, event) => {
+    /*
     let processorArr = createArr("processor");
     let processorFamilyArr = createArr("processorFamily");
     let yadroArr = createArr("yadro");
@@ -158,6 +156,12 @@ class ContainerContentSwitch extends React.Component {
       processorFamily: processorFamily
     };
 
+*/
+    let obj = this.props.reduxState.filterItems;
+    let processors = this.props.reduxState.allProcessorItem;
+    console.log(processors);
+    console.log(obj);
+
     function shouldItFilter(filterName) {
       return Object.values(obj[filterName]).some(e => e);
     }
@@ -186,6 +190,7 @@ function mapDispatchToProps(dispatch) {
   return {
     result: i => dispatch(addresult(i)),
     start: i => dispatch(allProcessorItem(i))
+    //filterItems: i => dispatch(filterItems(i))
   };
 }
 

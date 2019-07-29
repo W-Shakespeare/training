@@ -3,7 +3,7 @@ import Checkbox from "./Checkbox";
 
 function ManufactotALL({ liF }) {
   return (
-    <div className="manufactotALL">
+    <div className="manufactotALL" id="swo">
       <Checkbox
         key={1}
         name="Intel"

@@ -3,6 +3,7 @@ import React from "react";
 import OneProcessor from "./OneProcessor";
 
 function ComponentOneProcessorAll({ result, ShoppingСart }) {
+  console.log(result);
   return (
     <div className="oneProcessor-all">
       {result.map((item, i) => {

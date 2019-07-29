@@ -3,7 +3,8 @@ import {
   ADD_RESULT,
   SHOPPING_CART,
   SHOPPING_CART_LENGTH,
-  ADD_ID_ARR
+  ADD_ID_ARR,
+  FILTER_ITEMS
 } from "../types/types";
 
 function allProcessorItem(i) {
@@ -36,5 +37,17 @@ function addIdArr(i) {
     payload: i
   };
 }
+function filterItems(i) {
+  return {
+    type: FILTER_ITEMS,
+    payload: i
+  };
+}
 
-export { addresult, shoppingСart, shoppingСartLength, allProcessorItem };
+export {
+  addresult,
+  shoppingСart,
+  shoppingСartLength,
+  allProcessorItem,
+  filterItems
+};

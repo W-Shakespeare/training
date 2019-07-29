@@ -4,7 +4,7 @@ function Checkbox({ className, name, onClick }) {
   return (
     <div className="column-div-inp-chk div-oth">
       <h3 className="title-input">{name}</h3>
-      <label className="label-check label-all">
+      <label value={name} className="label-check label-all">
         <input
           className="inp-check"
           type="checkbox"
